@@ -1,1 +1,48 @@
 1.a: Write down the features of C-programming language.
+Ans: C Programming is widely used in Computer Technology, We can say that C is inspiration
+for development of other languages. We can use C for different purposes.
+Below are some of the Features of C Programming –
+1. Low Level Language Support
+2. Program Portability
+3. Powerful and Feature Rich
+4. Bit Manipulation
+5. High Level Features
+6. Modular Programming
+7. Efficient Use of Pointers
+
+1. Low Level Features:
+  - C Programming provides low level features that are generally provided by the
+    Lower level languages.
+  - C is Closely Related to Lower level Language such as “Assembly Language“.
+  - It is easier to write assembly language codes in C programming.
+
+2. Portability:
+  - C Programs are portable i.e. they can be run on any Compiler with Little or no Modification.
+  - Compiler and Preprocessor make it Possible for C Program to run it on different PC.
+
+3. Powerful:
+  - Provides wide verity of ‘Data Types‘
+  - Provides wide verity of ‘Functions’
+  - Provides useful control & loop control statements
+
+4. Bit Manipulation:
+  - C Programs can be manipulated using bits. We can perform different operations
+    at bit level.
+  - We can manage memory representation at bit level. [E.g.: We can use Structure to manage Memory at bit level]
+  - It provides wide verity of bit manipulation operators.
+  - We have bitwise operators to manage data at bit level.
+
+5. High Level Features:
+  - It is more User friendly as compare to Previous languages like BASIC, COBOL, FORTRANT.
+  - Previous languages and other programming languages never provide such great features to manage data.
+  - Previous languages have there pros and cons but C Programming collected all useful features of
+    previous languages thus C become more effective language.
+
+6. Modular Programming:
+  - Modular programming is a software design technique that increases the extent
+    to which software is composed of separate parts, called modules.
+  - C Program consist of different modules that are integrated together to form complete program.
+
+7. Efficient Use of Pointers
+  - Pointers has direct access to memory.
+  - C Supports efficient use of pointer
