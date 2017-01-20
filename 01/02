@@ -50,6 +50,8 @@ Primary Data Type                       Derived Data Type
                      +--+Structures
                      |
                      +--+Enums
+                     |
+                     +--+Union
 
 ----------------
 1. Primary data types:
@@ -80,7 +82,9 @@ Primary Data Type                       Derived Data Type
   - This is usually used to specify the type of functions.
 -------------------
 2. Derive data types:
-  - Derived data types are like arrays, functions, structures and pointers.
+  - Derived data types are like arrays, functions, structures and pointers etc.
+  - Here I am describe about 5 of the common derive data types:
+  
   2.1. Array
   - An array is a collection of data that holds fixed number of values of same type.
   - Example:
@@ -99,9 +103,14 @@ Primary Data Type                       Derived Data Type
   - Structure is a collection of variables of different types under a single name.
   - Keyword 'struct' is used for creating a structure.
 
-  2.4. Pointers
+  2.4. Union
+  - A union is a special data type available in C that allows to store different
+    data types in the same memory location.
+  - 'union' keyword is used to define a union.
+
+  2.5. Pointers
   - These are used in C program to access the memory and manipulate the address.
 
-  2.5. Enumeration
+  2.6. Enumeration
   - An enumeration is a user-defined data type that consists of integral constants.
   - To define an enumeration, keyword enum is used.
