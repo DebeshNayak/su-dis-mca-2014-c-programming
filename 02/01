@@ -392,8 +392,8 @@ int main()
     Example: *a where, * is pointer to the variablle a.
 
   3. sizeof():
-    - This give s the size of the variable as a integer data types
-    Example: sizeOf(char) will give us 1.
+    - This give s the size of the variable as a integer value.
+    Example: sizeOf(variable_name) will give us size occupied by the variable.
 
 Example:
 #include <stdio.h>
