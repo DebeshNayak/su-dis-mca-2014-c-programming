@@ -1,1 +1,38 @@
 3.b: Write a C program to check whether a string is palindrome or not.
+Ans:
+
+// CTMMCT = CTMMCT (Palindrome)
+
+/* Palindrome checker */
+#include <stdio.h>
+#include <string.h>
+
+// this function will make the reverse of the word
+void makeOpposite(char *word, char *reverseWord){
+    int i, j;
+
+    for(i = strlen(word) - 1, j = 0; i >= 0; i--, j++){
+        reverseWord[j] = word[i];
+    }
+    reverseWord[j] = '\0';
+
+}
+
+int main(){
+
+    char word[250];
+    char reverseWord[250];
+
+    printf("Enter a word to be checked as Palindrome: ");
+    scanf("%s",word);
+
+    makeOpposite(word, reverseWord);
+
+    if(strcmp(word, reverseWord) == 0){
+        printf("%s is Palindrome. \n", word);
+    }else{
+        printf("%s is not Palindrome. \n", word);
+    }
+
+    return 0;
+}
