@@ -26,6 +26,7 @@ int main(){
     printf("Enter a word to be checked as Palindrome: ");
     scanf("%s",word);
 
+    // this function will reverse the word and assign it to the second variable
     makeOpposite(word, reverseWord);
 
     if(strcmp(word, reverseWord) == 0){
