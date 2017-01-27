@@ -1,1 +1,184 @@
 5.a: Explain structure, union and enumeration user defined data types with the help of examples.
+Ans:
+1. Structure:
+A structure is a collection of variables of different data types under a single name.
+
+Scenario for using Structure:
+- You want to store some information about a person: his/her name, citizenship number and salary.
+- You can easily create different variable such as: name, citNo, salary to store these information separately.
+- However in the future, we have to store information about multiple persons: name1, citNo1, salary1
+- Doing so will make program big and messy.
+- A better approach will be to have a collection of all related information under a single name "Person",
+  and use it for every person.
+- Now, the program will looks much cleaner, readable and efficient as well.
+- Here the collection of all related information under a single name "Person" is a structure.
+
+Structure declaration in C:
+- Keyword "struct" is used for creating a structure.
+- Syntax of structure definition:
+struct structure_name{
+  data_type member1;
+  data_type member2;
+  .
+  .
+  data_type member;
+};
+
+- Syntax of structure definition:
+struct structure_name variable1, variable2, variable[20];
+
+Accessing members of a structure:
+- There are two types of operator used for accessing members of a structure:
+1. Member operator(.)
+2. Structure pointer operator(->)
+
+Syntax for accessing member of a structure:
+structure_variable_name.member _name
+
+Example:
+#include <stdio.h>
+struct Distance
+{
+  int feet;
+  int inch;
+};
+
+int main(){
+
+  struct Distance dist1, dist2, sum;
+
+  printf("1st Distance\n");
+
+  // Input of feet for structure variable dist1
+  printf("Enter feet: ");
+  scanf("%d", $dist1.feet);
+
+  // Input for inch for structure variable dist1
+  printf("Enter feet: ");
+  scanf("%d", $dist1.feet);
+
+  printf("2nd Distance\n");
+
+  // Input of feet for structure variable dist2
+  printf("Enter feet: ");
+  scanf("%d", $dist2.feet);
+
+  // Input for inch for structure variable dist2
+  printf("Enter feet: ");
+  scanf("%d", $dist2.feet);
+
+  printf("3rd Distance\n");
+
+  sum.feet = dist1.feet + dist2.feet;
+  sum.inch = dist1.inch + dist2.inch;
+
+  // fi inch is greater than 12, changing it to feet.
+  if(sum.inch > 12){
+    ++sum.feet;
+    sum.inch -= 12;
+  }
+
+  printf("Sum of distance = %d\' %.1f\"", sum.feet, sum.inch);
+
+  return 0;
+}
+-------------------------------
+Union:
+- A union is a collection of variables of different data types under a single name.
+- Union is quite similar to structure.
+
+Difference between union and structure:
+1 - More memory is allocated to structures than union.
+    - The amount of memory required to store a structure variable is the sum of memory size of all members.
+    - In case of union, the memory required is the memory required for the largest member of an union.
+2 - Only one union member can be accessed at a time
+    - In the case of structure, all of its members can be accessed at any time.
+    - In the case of union, only one of its members can be accessed at a time and all other members will contain garbage values.
+
+Union declaration syntax:
+union car
+{
+  char name[50];
+  int price;
+};
+
+- Syntax of union definition:
+union union_name variable1, variable2, variable[20];
+
+Accessing members of a structure:
+1. Member operator(.)
+  union_name.member1;
+
+Example:
+
+#include <stdio.h>
+union job
+{
+   char name[32];
+   float salary;
+   int workerNo;
+};
+
+int main()
+{
+   union job job1;
+
+   printf("Enter name:\n");
+   scanf("%s", &job1.name);
+
+   printf("Enter salary: \n");
+   scanf("%f", &job1.salary);
+
+   printf("Displaying\nName :%s\n", job1.name);
+   printf("Salary: %.1f", job1.salary);
+
+   return 0;
+}
+---
+Output:
+Enter name:
+Sunandini
+Enter salary:
+30000
+Displaying
+Name: fdkfskdjjfs
+Salary: 30000.0
+
+Note: here "name" union member contain some garbage variable although we entered it,
+because in union one union member could be accessed at a time, and other contain garbage value.
+-------------------
+Enumeration:
+- An enumeration is a user-defined data type that consists of integral constants.
+- To define an enumeration, keyword "enum" is used.
+- Enum variable takes only one value out of many possible values.
+- Working with enums gives efficiency along with flexibility.
+
+Syntax:
+enum variable_name { const1, const2, ..., constN };
+
+- Here by default, const1 is 0, const2  is 1 and so on.
+- We can change the default values of "enum" during declaration like following:
+
+enum suit {
+  club = 0,
+  diamonds = 10,
+  hearts = 20,
+  spades = 3
+}
+
+Example:
+#include <stdio.h>
+
+enum suit {
+    club = 0,
+    diamonds = 10,
+    hearts = 20,
+    spades = 3
+} card;
+
+int main()
+{
+  card = club;
+	printf("Size of enum variable = %d bytes", sizeof(card));
+	return 0;
+}
